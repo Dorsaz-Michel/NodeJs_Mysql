@@ -7,16 +7,11 @@ export default class MysqlORM {
     /** @type {MysqlConnection} */
     #mysqlConnection;
 
-    constructor(config, entitiesDirectoryPath) {
-        this.#mysqlConnection = new MysqlConnection(config);
-
-        if (fs.existsSync(entitiesDirectoryPath))
-            this.#recursiveEvaluate('./' + entitiesDirectoryPath);
-        else
-            throw new Error(`Unable to find entities directory '${entitiesDirectoryPath}'`);
+    static async init(config, entitiesDirectoryPath) {
+        await new MysqlORM().init(config, entitiesDirectoryPath);
     }
 
-    async static init(config, entitiesDirectoryPath) {
+    async init(config, entitiesDirectoryPath) {
         this.#mysqlConnection = new MysqlConnection(config);
 
         if (fs.existsSync(entitiesDirectoryPath))
