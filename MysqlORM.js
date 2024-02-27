@@ -12,6 +12,7 @@ export default class MysqlORM {
     }
 
     async init(config, entitiesDirectoryPath) {
+        config["rowsAsArray"] = true;
         this.#mysqlConnection = new MysqlConnection(config);
 
         if (fs.existsSync(entitiesDirectoryPath))
