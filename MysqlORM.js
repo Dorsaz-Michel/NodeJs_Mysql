@@ -11,7 +11,7 @@ export default class MysqlORM {
             this.#mysqlConnection = new MysqlConnection(config);
 
         if (fs.existsSync(entitiesDirectoryPath))
-            this.#recursiveEvaluate(entitiesDirectoryPath);
+            this.#recursiveEvaluate('./' + entitiesDirectoryPath);
         else
             throw new Error(`Unable to find entities directory '${entitiesDirectoryPath}'`);
     }
@@ -33,7 +33,7 @@ export default class MysqlORM {
                 return;
             }
 
-            let entityClass = (await import(`${process.platform === 'win32' ? 'file://' : ''}${path}/${entry.name}`)).default
+            let entityClass = (await import(`${process.platform === 'win32' ? `file://${process.cwd()}` : ''}/${path}/${entry.name}`)).default
 
             if (entityClass?.prototype instanceof Entity) {
 
