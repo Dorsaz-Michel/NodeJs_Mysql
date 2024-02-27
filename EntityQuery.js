@@ -39,6 +39,7 @@ export default class EntityQuery {
      * <ul>
      *     <li>key : Specify which column in the entity is used for the relation,</li>
      *     <li>parentKey: Specifiy which column in the parent entity (the one before .with) is used for the relation,</li>
+     *     <li>field: Specify the name of the parent field where elements will be added,</li>
      *     <li>condition: Specifiy additional conditions to be used in the ON part of the join.</li>
      * </ul>
      *
@@ -46,6 +47,7 @@ export default class EntityQuery {
      * @param {{
      *     key: string?,
      *     parentKey: string?,
+     *     field: string?,
      *     condition: string?
      * }} options
      * @return {EntityQuery}
@@ -67,6 +69,7 @@ export default class EntityQuery {
      * <ul>
      *     <li>key : Specify which column in the entity is used for the relation,</li>
      *     <li>parentKey: Specifiy which column in the parent entity (the one before .with) is used for the relation,</li>
+     *     <li>field: Specify the name of the parent field where elements will be added,</li>
      *     <li>condition: Specifiy additional conditions to be used in the ON part of the join.</li>
      * </ul>
      *
@@ -74,6 +77,7 @@ export default class EntityQuery {
      * @param {{
      *     key: string?,
      *     parentKey: string?,
+     *     field: string?,
      *     condition: string?
      * }} options
      * @return {EntityQuery}
