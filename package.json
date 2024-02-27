@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "description": "A layer over mysql2 that allow the creation of a QueryBuilder",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Michel Dorsaz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.9.2"
+  }
 }
