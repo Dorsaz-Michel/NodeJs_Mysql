@@ -1,5 +1,6 @@
 {
   "name": "mysql_connection",
+  "type": "module",
   "version": "1.0.0",
   "description": "A layer over mysql2 that allow the creation of a QueryBuilder",
   "main": "index.js",
