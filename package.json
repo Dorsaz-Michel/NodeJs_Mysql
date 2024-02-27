@@ -1,0 +1,15 @@
+{
+  "name": "mysql_orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Michel Dorsaz",
+  "license": "ISC",
+  "dependencies": {
+    "mysql_connection": "github:Dorsaz-Michel/NodeJs_Mysql#mysql_connection"
+  }
+}

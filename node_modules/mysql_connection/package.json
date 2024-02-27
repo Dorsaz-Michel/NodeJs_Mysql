@@ -1,0 +1,11 @@
+{
+  "name": "mysql_connection",
+  "version": "1.0.0",
+  "description": "A layer over mysql2 that allow the creation of a QueryBuilder",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Michel Dorsaz",
+  "license": "ISC"
+}
