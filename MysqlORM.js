@@ -1,13 +1,14 @@
 import fs from "fs";
 import Entity from "./Entity.js";
+import MysqlConnection from "mysql_connection/MysqlConnection.js";
 
 export default class MysqlORM {
 
     /** @type {MysqlConnection} */
     #mysqlConnection;
 
-    constructor(mysqlConnection, entitiesDirectoryPath) {
-        this.#mysqlConnection = mysqlConnection;
+    constructor(config, entitiesDirectoryPath) {
+            this.#mysqlConnection = new MysqlConnection(config);
 
         if (fs.existsSync(entitiesDirectoryPath))
             this.#recursiveEvaluate(entitiesDirectoryPath);
